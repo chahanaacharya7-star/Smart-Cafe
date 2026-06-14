@@ -48,7 +48,7 @@ const login = async (req, res) => {
   }
 
   const user = await User.findOne({ email });
-  if (user && (await user.matchPassword(password))) {
+  if (user && user.password === password) {
     res.json({
       success: true,
       data: {
