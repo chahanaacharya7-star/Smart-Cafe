@@ -3,7 +3,8 @@ const Category = require('../models/category.model');
 const mongoose = require('mongoose');
 
 const createMenuItem = async (req, res) => {
-  const { name, description, price, category, imageUrl, stock, isAvailable } = req.body;
+  const { name, description, price, category, stock, isAvailable } = req.body;
+  const imageUrl = req.body.imageUrl || req.body.image;
 
   if (!name || price === undefined || !category) {
     return res.status(400).json({ success: false, message: 'Please provide name, price, and category' });
@@ -24,7 +25,7 @@ const createMenuItem = async (req, res) => {
     price,
     category: categoryId,
     imageUrl,
-    stock: stock || 0,
+    stock: stock !== undefined ? stock : 100,
     isAvailable: isAvailable !== undefined ? isAvailable : true,
   });
 
