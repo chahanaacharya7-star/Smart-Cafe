@@ -12,7 +12,8 @@ const router = express.Router();
 router.use(verifyToken);
 
 router.route('/')
-  .get(getCart);
+  .get(getCart)
+  .post(addToCart);
 
 router.post('/add', addToCart);
 router.patch('/update', updateCartItem);
