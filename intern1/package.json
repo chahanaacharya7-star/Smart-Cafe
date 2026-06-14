@@ -1,0 +1,37 @@
+{
+  "name": "smart-cafe-backend",
+  "version": "1.0.0",
+  "description": "Smart Cafe Management System Backend",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest --detectOpenHandles"
+  },
+  "keywords": [
+    "cafe",
+    "management",
+    "mern",
+    "rest-api"
+  ],
+  "author": "Code IT Intern Group H",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.41.3",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.2",
+    "express-rate-limit": "^7.0.0",
+    "express-validator": "^7.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.0",
+    "multer": "^1.4.5-lts.1",
+    "pdfkit": "^0.13.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1",
+    "supertest": "^6.3.3"
+  }
+}
